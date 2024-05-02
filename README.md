@@ -44,7 +44,7 @@ Note that **when adaptive method is applied, the output of SDM will not be 1-bit
 
 Simulink files are in 'simulink', which describe a commonly-seen SDM model, also with adaptive feedback.
 
-About adaptive method, see *Clemens M. Zierhofer*'s *Adaptive Sigma–Delta Modulation With One-Bit Quantization*.
+About adaptive method, see *Clemens M. Zierhofer, Adaptive Sigma–Delta Modulation With One-Bit Quantization*.
 
 Simulink 文件在 'simulink' 中，文件描述了一个常见的 SDM 模型，并采用了自适应反馈。
 
