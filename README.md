@@ -6,11 +6,11 @@ This repo is an implementation of 1-bit sigma-delta DAC (SDDAC) on FPGA with Ver
 
 - [X] 1st-order SDDAC simulink simulation
 
-- [X] lst-order SDDAC Verilog behavioural simulation
+- [X] 1st-order SDDAC Verilog behavioural simulation
 
-- [X] lst-order SDDAC Verilog RTL Systhesis
+- [X] 1st-order SDDAC Verilog RTL Systhesis
 
-- [ ] lst-order SDDAC Verilog board test
+- [ ] 1st-order SDDAC Verilog board test
 
 - [X] Adaptive SDDAC (1st and 2nd order) simulink simulation
 
