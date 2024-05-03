@@ -42,11 +42,11 @@ Note that **when adaptive method is applied, the output of SDM will not be 1-bit
 
 ## Simulink
 
-Simulink files are in 'simulink', which describe a commonly-seen SDM model, also with adaptive feedback.
+Simulink files are in 'simulink', in whcih 'simumod.slx' describes a commonly-seen SDM model, also with adaptive feedback. And 'simu_hdl_1st.slx' is a simulink model which describes SDM's Verilog implementaion and following LPF. It's not very similar to a commonly-seen SDM model, but shares a same priciple.
 
 About adaptive method, see *Clemens M. Zierhofer, Adaptive Sigma–Delta Modulation With One-Bit Quantization*.
 
-Simulink 文件在 'simulink' 中，文件描述了一个常见的 SDM 模型，并采用了自适应反馈。
+Simulink 文件在 'simulink' 中，'simumod.slx'描述了一个常见的 SDM 模型，并采用了自适应反馈。而 'simu_hdl_1st.slx' 这个 simulink 模型描述的是 SDM 的 Verilog 实现以及紧随其后的 LPF 。它与常见的 SDM 模型并不是很相似，但是原理是一致的。
 
 关于自适应反馈，参照 *Clemens M. Zierhofer* 的 *Adaptive Sigma–Delta Modulation With One-Bit Quantization*.
 
@@ -60,12 +60,8 @@ Verilog implementation of 1st-order 1-bit SDDAC is in 'first_order', where 'SDmo
 
 Run testbench will give a PDM signal 'pdmout.csv', 'postcheck.m' will plot FFT of this PDM signal, which is 'SDM1st_FFT.png', and also a comparison of origin input signal and final output signal.
 
-Here 'simu_hdl_1st.slx' is a simulink model of 'SDmodu.v', which is not very similar to a commonly-seen SDM model, but shares a same priciple.
-
 一阶 1 位 SDDAC 的 Verilog 实现在 'first_order' 中，'SDmodu.v' 是 SDDAC 主模块，'top_tb.v' 是 testbench。
 
 'wavegen.m' 将产生一个测试波形 'tbwave.csv', 目前该波形是 $\sin(2 \pi f_0 t)$ ，这里 f0 = 10kHz ，该频率位于 20Hz 到 20kHz 之间 (即音频范围)。
 
 运行 testbench 将给出 PDM 信号 'pdmout.csv'，'postcheck.m' 将绘制出该 PDM 信号的 FFT ，即这里的 'SDM1st_FFT.png' ，同时还将画出原输入信号和最终输出的信号对比图。
-
-这里 'simu_hdl_1st.slx' 是 'SDmodu.v' 的 simulink 模型，它与常见的 SDM 模型并不是很相似，但是原理是一致的。

@@ -34,5 +34,5 @@ module SDmodu
 			//cnt>=0: cnt + din - 2^15
 		end
 	end
-	assign pdm = cnt[N+1];
+	assign pdm = ~cnt[N+1];
 endmodule
