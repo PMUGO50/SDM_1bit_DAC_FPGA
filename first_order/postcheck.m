@@ -36,7 +36,8 @@ function specploter(pdmout, fs)
     N = length(pdmout);
     f = 0:(N/2-1);
     f = f./N.*fs;
-    pdmfft = mag2db(abs(fft(pdmout)));
+    pdmfft = abs(fft(pdmout));
+    %pdmfft = mag2db(pdmfft);
     pdmfft = pdmfft(1:N/2);
 
     figure(1);
@@ -46,7 +47,8 @@ function specploter(pdmout, fs)
     ax.Title.String = 'SDM FFT';
     ax.XLabel.String = 'freq/Hz';
     ax.XScale = 'log';
-    ax.YLabel.String = 'dB';
+    %ax.YLabel.String = 'dB';
+    ax.YAxis.Exponent = 3;
 
     ax.XGrid = 'on';
     ax.YGrid = 'on';
