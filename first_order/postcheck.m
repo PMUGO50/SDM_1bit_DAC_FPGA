@@ -5,7 +5,7 @@ function postcheck()
     x_origin = signhex2dec(x_origin)./A;
     pdmout = readmatrix("pdmout.csv");
     fb = 2e4; %fb = omega_b/(2pi) = 1/(2pi*tau) = RC/(2pi)
-    x_lpf = lowpass(pdmout, fb, fs);
+    x_lpf = alpf(pdmout, fb, fs);
     specploter(pdmout, fs);
     waveploter(x_origin, x_lpf, fs);
 end
@@ -23,7 +23,7 @@ function y = signhex2dec(x)
     end
 end
 
-function x_lpf = lowpass(pdmout, fb, fs)
+function x_lpf = alpf(pdmout, fb, fs)
     pdmout = pdmout.*2 - 1;
     x_lpf = [];
     x_lpf(1) = 0; %initial condition
