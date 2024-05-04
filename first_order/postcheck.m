@@ -24,12 +24,12 @@ function y = signhex2dec(x)
 end
 
 function x_lpf = lowpass(pdmout, fb, fs)
+    pdmout = pdmout.*2 - 1;
     x_lpf = [];
     x_lpf(1) = 0; %initial condition
     for n=2:length(pdmout)
         x_lpf(n) = (fs*x_lpf(n-1) + (2*pi*fb).*pdmout(n)) / (fs+2*pi*fb);
     end
-    x_lpf = x_lpf.*2 - 1;
 end
 
 function specploter(pdmout, fs)
@@ -41,6 +41,7 @@ function specploter(pdmout, fs)
     pdmfft = pdmfft(1:N/2);
 
     figure(1);
+    % subplot(2,1,1);
     ax = gca;
     plot(f, pdmfft, '-', 'LineWidth', 1, 'Color', '#FF8C00');
     grid on;
@@ -60,6 +61,7 @@ function waveploter(x_origin, x_lpf, fs)
     t1 = 0:(length(x_origin)-1);
     t1 = t1./fs;
     figure(2);
+    % subplot(2,1,2);
     ax = gca;
     plot(t1.*1e6, x_origin, '-', 'LineWidth', 1, 'Color', '#228B22');
     hold on;
