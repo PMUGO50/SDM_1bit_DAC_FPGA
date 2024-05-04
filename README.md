@@ -30,14 +30,14 @@ Verilog implementation of 1st-order 1-bit SDM is 'SDM1st.v', and that of 2nd-ord
 
 'top_tb.v' is testbench, run testbench will give a PDM signal 'pdmout.csv'. 'tbwave.csv' is input signal for testbench simulation. This signal is
 $$
-x[n] = \sin[(2\pi f_0) nT_s] + 0.75 \sin[(2\pi \times 0.3f_0) nT_s] + 0.25 \sin[(2\pi \times 5f_0) nT_s]
+x[n] = 2000\sin[(2\pi f_0) nT_s] + 1500\sin[(2\pi \times 0.3f_0) nT_s] + 500\sin[(2\pi \times 5f_0) nT_s]
 $$
-here $f_0 = 20\mathrm{kHz}$ , and sampling period is $T_s=1/25\mathrm{MHz}$ , of course this is a superposition of sine waves.
+here $f_0 = 20\mathrm{kHz}$ , and sampling period is $T_s=1/25\mathrm{MHz}$ . Of course this is a superposition of sine waves, since input is a 16-bit signed int, this is a relatively small signal.
 
 一阶 1 位 SDM 的 Verilog 实现是 'SDM1st.v' ，二阶的则是 'SDM2nd.v' 。
 
 'top_tb.v' 是 testbench ，运行 testbench 将得到一个 PDM 信号 'pdmout.csv' 。'tbwave.csv' 是 testbench 仿真时的输入信号。这个信号是
 $$
-x[n] = \sin[(2\pi f_0) nT_s] + 0.75 \sin[(2\pi \times 0.3f_0) nT_s] + 0.25 \sin[(2\pi \times 5f_0) nT_s]
+x[n] = 2000\sin[(2\pi f_0) nT_s] + 1500\sin[(2\pi \times 0.3f_0) nT_s] + 500\sin[(2\pi \times 5f_0) nT_s]
 $$
-这里 $f_0 = 20\mathrm{kHz}$ , 采样周期则是 $T_s=1/25\mathrm{MHz}$ , 这个信号是正弦波的叠加。
+这里 $f_0 = 20\mathrm{kHz}$ , 采样周期则是 $T_s=1/25\mathrm{MHz}$ 。 这个信号是正弦波的叠加，由于输入是一个 16 位的符号数，所以这是个相对小的信号。
