@@ -1,8 +1,8 @@
 # SDM_1bit_DAC_FPGA
 
-This repo is an implementation of 1-bit sigma-delta DAC (SDDAC) on FPGA with Verilog.
+This repo is an implementation of the digital part of 1-bit sigma-delta DAC (SDDAC) on FPGA with Verilog, which is 1-bit sigma-delta modulator (SDM) .
 
-1-bit SDDAC is a kind of Pulse Density Modulation (PDM). Sigma-delta modulator (SDM) will output a signal jumping between 1 and 0 (that is 1-bit). Then this signal will be sent to an Analog Low Pass Filter (LPF) and finally generate an analog signal.
+1-bit SDM is a kind of Pulse Density Modulation (PDM). It will output a signal jumping between 1 and 0 (that is 1-bit). Then this signal can be sent to an Analog LPF and finally generate an analog signal.
 
 - [X] 1st and 2nd order SDDAC simulink simulation
 
@@ -12,9 +12,9 @@ This repo is an implementation of 1-bit sigma-delta DAC (SDDAC) on FPGA with Ver
 
 - [ ] 1st-order SDDAC Verilog board test
 
-本仓库是用 Verilog 对 1 位 sigma-delta DAC 在 FPGA 上的实现。
+本仓库是用 Verilog 对 1 位 sigma-delta DAC 的数字部分在 FPGA 上的实现，即 sigma-delta 调制器。
 
-1 位 SDDAC 是脉冲密度调制的一种方式，Sigma-delta 调制器将输出一个在 1 和 0 之间跳变的信号 (即 1 位的信号) 。该信号接下来被输入到一个模拟的低通滤波器中并得到最终的输出。
+1 位 SDM 是脉冲密度调制的一种方式。它将输出一个在 1 和 0 之间跳变的信号 (即 1 位的信号) 。该信号接下来可以被送入一个模拟 LPF 中并得到模拟信号。
 
 - [X] 一二阶 SDDAC simulink 仿真
 
