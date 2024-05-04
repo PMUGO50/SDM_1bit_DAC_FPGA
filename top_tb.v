@@ -10,7 +10,7 @@ module top_tb;
 	reg areset;
 	reg [N-1:0] din;
 	wire pdm;
-	SDmodu uut(
+	SDM1st	uut(
 		.clk(clk), 
 		.areset(areset), 
 		.din(din),

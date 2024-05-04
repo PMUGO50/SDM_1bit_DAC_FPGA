@@ -1,6 +1,6 @@
 `timescale 1ns / 10ps
 
-module SDmodu
+module SDM1st
 #(
 	parameter N=16
 )
