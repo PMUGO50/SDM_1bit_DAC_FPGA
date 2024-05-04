@@ -24,7 +24,7 @@ This repo is an implementation of the digital part of 1-bit sigma-delta DAC (SDD
 
 - [ ] 一二阶 SDDAC Verilog 上板测试
 
-## Verilog
+## Verilog_SDM
 
 Verilog implementation of 1st-order 1-bit SDM is 'SDM1st.v', and that of 2nd-order one is 'SDM2nd.v'.
 
@@ -45,3 +45,9 @@ x[n] = 2000\sin[(2\pi f_0) nT_s] + 1500\sin[(2\pi \times 0.3f_0) nT_s] + 500\sin
 $$
 
 这里 $f_0 = 20\mathrm{kHz}$ , 采样周期则是 $T_s=1/f_s=1/25\mathrm{MHz}$ 。 这个信号是正弦波的叠加，由于输入是一个 16 位的符号数，所以这是个相对小的信号。
+
+## Verilog_PWM
+
+There is also a verilog implementation of 8-bit PWM, which is 'pwmer.v'. 'top_tb.v' is testbench, whose input test signal is similar to the one of SDM.
+
+这里也有一个 8 位 PWM 的 Verilog 实现 'pwmer.v' 。 'top_tb.v' 是 testbench ，其输入测试信号和 SDM 的相似。
